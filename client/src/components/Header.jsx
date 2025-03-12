@@ -1,17 +1,40 @@
 import { Icon } from "@iconify/react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import serverUrl from "../config";
 import headerNavigations from "../data/headerNavigations";
 import MultiLevelDropdown from "../ui/MultiLevelDropDown";
 import { Calculator, Products } from "../data/HeaderData";
+import { useState, useRef, useEffect } from "react";
+import { closeHam, toggleHam } from "../store/HamBurgerBtnSlice";
 
 function Header() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const itemCount = useSelector((state) => state.cart.total);
   const role = useSelector((state) => state.role.role);
+
+  const isOpen = useSelector((state) => state.hamBtn.isOpen);
+  const menuRef = useRef(null);
+
+  // Function to handle clicks outside the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        dispatch(closeHam());
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   const handleAuth = () => {
     console.log(role);
@@ -71,7 +94,22 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex w-full justify-evenly items-center">
+        {/* Burger Button (Mobile Only) */}
+        <button onClick={() => dispatch(toggleHam())} className="md:hidden p-2">
+          <Icon
+            icon={isOpen ? "mdi:close" : "mdi:menu"}
+            width="30"
+            height="30"
+          />
+        </button>
+
+        {/* header nav tab- sm */}
+        <div
+          ref={menuRef}
+          className={`${
+            isOpen ? "flex" : "hidden"
+          } flex-col md:flex md:flex-row w-full justify-evenly items-center`}
+        >
           <MultiLevelDropdown menuData={Calculator} name={"CALCULATOR"} />
           <MultiLevelDropdown menuData={Products} name={"PRODUCTS"} />
           {headerNavigations.map((item, key) => {
