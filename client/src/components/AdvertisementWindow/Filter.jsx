@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import Carousel from "./Carousel";
+import Carousel from "../Carousel";
 import { useNavigate } from "react-router-dom";
 
 function Filter() {
@@ -18,25 +18,7 @@ function Filter() {
   return (
     <div className="w-full ">
       <div className="flex flex-col text-lg font-semibold text-white p-3 gradient-col mt-36 md:my-5">
-        <Carousel images={img} autoplayInterval={2000} />
-      </div>
-
-      <div className=" w-full text-gray-700 justify-around flex flex-col">
-        <div className="w-full border px-2 text-sm text-center border-green-400 bg-green-50 text-green-400 py-3">
-          51 insurers offering lowest prices
-        </div>
-        <span className="text-red-400 font-semibold">
-          Quick, easy & hassle free
-        </span>
-
-        <div
-          onClick={() => navigate("/offer")}
-          className="w-full cursor-pointer mt-3 border text-xl justify-evenly item-center text-gray-500 flex px-1 py-1"
-        >
-          <Icon icon="tabler:discount-2" width="40" />
-          <span className="p-1">Check Coupons</span>
-          <Icon icon="mingcute:right-fill" width="40" />
-        </div>
+        <Carousel images={img} autoplayInterval={3500} />
       </div>
     </div>
   );

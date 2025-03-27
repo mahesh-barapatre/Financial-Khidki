@@ -2,12 +2,16 @@ import { Icon } from "@iconify/react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import serverUrl from "../config";
-import headerNavigations from "../data/headerNavigations";
-import MultiLevelDropdown from "../ui/MultiLevelDropDown";
-import { Calculator, Products } from "../data/HeaderData";
+import serverUrl from "../../config";
+import {
+  headerNavigations1,
+  headerNavigations2,
+  headerNavigations3,
+} from "../../data/headerNavigations";
+import MultiLevelDropdown from "../../ui/MultiLevelDropDown";
+import { Calculator, Products, RaiseTicket } from "../../data/HeaderData";
 import { useState, useRef, useEffect } from "react";
-import { closeHam, toggleHam } from "../store/HamBurgerBtnSlice";
+import { closeHam, toggleHam } from "../../store/HamBurgerBtnSlice";
 
 function Header() {
   const navigate = useNavigate();
@@ -65,35 +69,37 @@ function Header() {
     "transform cursor-pointer hover:scale-150 transition-transform duration-300 ease-in-out";
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center shadow-lg py-3 sm:pl-10 w-full fixed top-0 bg-white z-50">
-      <div className="w-full sm:w-1/3 pl-5">
+    <div className="flex flex-col justify-between items-center shadow-lg py-3 sm:pl-10 w-full fixed top-0 bg-white z-50">
+      {/* header first layer */}
+      <div className="w-full pl-5 flex justify-between">
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
         <div className="text-xl font-extrabold text-blue-500">
           Financial Khidki
         </div>
-        <div className="text-3xl">
+        {/* <div className="text-3xl">
           Let's find you the <span className="font-bold">Best Insurance</span>
-        </div>
-      </div>
-      <div className="flex flex-col w-full sm:w-3/5">
+        </div> */}
         <div
           className="flex flex-row justify-end space-x-4 mb-2 mr-8"
           id="special_btn"
         >
-          <div
-            onClick={() => navigate("/login")}
-            className="flex justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
-          >
-            <div>LOGIN</div>
-          </div>
           <div
             onClick={() => navigate("/")}
             className="flex justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
           >
             <div>BECOME OUR PARTNER</div>
           </div>
+          <div
+            onClick={() => navigate("/login")}
+            className="flex justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
+          >
+            <div>LOGIN</div>
+          </div>
         </div>
+      </div>
 
+      {/* header second layer */}
+      <div className="flex flex-col w-full sm:w-4/5">
         {/* Burger Button (Mobile Only) */}
         <button onClick={() => dispatch(toggleHam())} className="md:hidden p-2">
           <Icon
@@ -110,9 +116,7 @@ function Header() {
             isOpen ? "flex" : "hidden"
           } flex-col md:flex md:flex-row w-full justify-evenly items-center`}
         >
-          <MultiLevelDropdown menuData={Calculator} name={"CALCULATOR"} />
-          <MultiLevelDropdown menuData={Products} name={"PRODUCTS"} />
-          {headerNavigations.map((item, key) => {
+          {headerNavigations1.map((item, key) => {
             return (
               <div
                 onClick={() => navigate(`${item.navigate}`)}
@@ -123,24 +127,31 @@ function Header() {
               </div>
             );
           })}
-          {/* {role === "" ? null : (
-          <Icon
-            onClick={logout}
-            className={iconCss}
-            icon="humbleicons:logout"
-            width="30"
-            height="30"
-          />
-        )}
-        {role === "user" ? null : (
-          <Icon
-            onClick={handleAuth}
-            className={iconCss}
-            icon="solar:user-broken"
-            width="30"
-            height="30"
-          />
-        )} */}
+          <MultiLevelDropdown menuData={Products} name={"Products"} />
+          {headerNavigations2.map((item, key) => {
+            return (
+              <div
+                onClick={() => navigate(`${item.navigate}`)}
+                key={key}
+                className="flex  justify-center items-center flex-col hover:text-blue-500 cursor-pointer hover:underline"
+              >
+                <div>{item.name}</div>
+              </div>
+            );
+          })}
+          <MultiLevelDropdown menuData={Calculator} name={"Calculator"} />
+          <MultiLevelDropdown menuData={RaiseTicket} name={"Raise Ticket"} />
+          {headerNavigations3.map((item, key) => {
+            return (
+              <div
+                onClick={() => navigate(`${item.navigate}`)}
+                key={key}
+                className="flex justify-center items-center flex-col hover:text-blue-500 cursor-pointer hover:underline"
+              >
+                <div>{item.name}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

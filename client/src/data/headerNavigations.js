@@ -1,24 +1,22 @@
-const headerNavigations = [
+export const headerNavigations1 = [
   {
     navigate: "/",
-    name: "HOME",
+    name: "Home",
   },
+];
+export const headerNavigations2 = [
   {
     navigate: "/claim",
-    name: "CLAIM",
+    name: "Claim",
   },
-  {
-    navigate: "/raise_ticket",
-    name: "RAISE TICKET",
-  },
+];
+export const headerNavigations3 = [
   {
     navigate: "/",
-    name: "EVENT GALLARY",
+    name: "News",
   },
   {
     navigate: "/help",
-    name: "CONTACT US",
+    name: "Contact Us",
   },
 ];
-
-export default headerNavigations;
