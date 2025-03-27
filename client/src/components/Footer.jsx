@@ -4,8 +4,8 @@ import { Icon } from "@iconify/react";
 function Footer() {
   return (
     <div className="border border-slate-400 flex px-12 py-5 space-y-5 flex-col w-full">
-      <div className="flex justify-evenly items-start w-full text-sm">
-        <div className="flex flex-col space-y-3 justify-evenly h-full">
+      <div className="flex flex-col md:flex-row justify-evenly items-start w-full text-sm">
+        <div className="flex flex-col space-y-3 justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Company</h6>
           <p>About Us</p>
           <p>Sitemap</p>
@@ -16,7 +16,7 @@ function Footer() {
           <p>Verify your advisor</p>
           <p>Investor Relations</p>
         </div>
-        <div className="flex flex-col space-y-3 text-start justify-evenly h-full">
+        <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Insurance</h6>
           <p>General Insurance</p>
           <p>Life Insurance</p>
@@ -25,7 +25,7 @@ function Footer() {
           <p>Health Insurance</p>
           <p>Other Insurance</p>
         </div>
-        <div className="flex flex-col space-y-3 text-start justify-evenly h-full">
+        <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Resources</h6>
           <p>Articles</p>
           <p>Customer reviews</p>
@@ -34,7 +34,7 @@ function Footer() {
           <p>Awards</p>
           <p>PB Life</p>
         </div>
-        <div className="flex flex-col space-y-3 text-start justify-evenly h-full">
+        <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">
             Calculators
           </h6>

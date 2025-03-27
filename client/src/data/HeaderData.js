@@ -3,25 +3,36 @@ export const Calculator = [
   { name: "Insurance Premium Calculator", url: "/settings" },
 ];
 
+export const RaiseTicket = [
+  { name: "Create Ticket", url: "/profile" },
+  { name: "Track Ticket", url: "/settings" },
+];
+
 export const Products = [
-  { name: "Mutual Fund", url: "/profile" },
-  { name: "Fixed Deposit", url: "/settings" },
-  { name: "Demat", url: "/settings" },
-  { name: "Loan", url: "/settings" },
   {
     name: "Motor Insurance",
     submenu: [
-      { name: "Car", url: "/sub1" },
       { name: "Bike", url: "/sub2" },
+      { name: "Car", url: "/sub1" },
       { name: "Commercial Vechicle", url: "/sub2" },
     ],
   },
+  { name: "Health Insurance", url: "/settings" },
+  { name: "Term Insurance", url: "/settings" },
+  { name: "Personal Accident Insurance", url: "/settings" },
   {
     name: "SME Insurance",
-    submenu: [{ name: "Refer Insurance", url: "/sub1" }],
+    submenu: [
+      { name: "Fire Insurance", url: "/sub1" },
+      { name: "Home Insurance", url: "/sub1" },
+      { name: "Specific Marine WorkMen Compensation", url: "/sub1" },
+      { name: "CPM", url: "/sub1" },
+      { name: "Other", url: "/sub1" },
+    ],
   },
-  { name: "Health Insurance", url: "/settings" },
-  { name: "Life Insurance", url: "/settings" },
   { name: "Travel Insurance", url: "/settings" },
-  { name: "Personal Accident Insurance", url: "/settings" },
+  { name: "Open Demat", url: "/settings" },
+  { name: "Mutual Funds", url: "/profile" },
+  { name: "Fixed Deposit", url: "/settings" },
+  { name: "Loan", url: "/settings" },
 ];
