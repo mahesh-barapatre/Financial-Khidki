@@ -8,13 +8,8 @@ function Footer() {
         <div className="flex flex-col space-y-3 justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Company</h6>
           <p>About Us</p>
-          <p>Sitemap</p>
-          <p>Careers</p>
-          <p>Legal & Admin policies</p>
-          <p>ISNP</p>
+
           <p>Contact us</p>
-          <p>Verify your advisor</p>
-          <p>Investor Relations</p>
         </div>
         <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Insurance</h6>
@@ -30,25 +25,16 @@ function Footer() {
           <p>Articles</p>
           <p>Customer reviews</p>
           <p>Insurance companies</p>
-          <p>Newsroom</p>
-          <p>Awards</p>
-          <p>PB Life</p>
+
+          <p>Event Gallery</p>
         </div>
         <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">
             Calculators
           </h6>
+          <p>MF Return Calculator</p>
           <p>SIP Calculator</p>
-          <p>Income Tax Calculator</p>
-          <p>Compound Interest Calculator</p>
-          <p>NPS Calculator</p>
-          <p>Term Insurance Calculator</p>
-          <p>HLV Calculator</p>
-          <p>Life Insurance Calculator</p>
-          <p>Health Insurance Calculator</p>
-          <p>Travel Insurance Calculator</p>
-          <p>Car Insurance Calculator</p>
-          <p>Bike Insurance Calculator</p>
+          <p>Insurance Premium Calculator</p>
         </div>
       </div>
       <h6 className="font-extrabold text-xs mx-auto">

@@ -17,33 +17,37 @@ import Success from "./Pages/Success";
 import CustomItemReq from "./Pages/CustomItemReq";
 import Claim from "./Pages/Claim";
 import RaiseTicket from "./Pages/RaiseTicket";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/help" element={<CustomerCare />} />
-        <Route path="/claim" element={<Claim />} />
-        <Route path="/raise_ticket" element={<RaiseTicket />} />
-        {<Route path="/login" element={<Login />} />}
-        {<Route path="/register" element={<Register />} />}
-        <Route path="/offer" element={<Offers />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/product/:id" element={<Product />} />
+      <div className="mt-20">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/help" element={<CustomerCare />} />
+          <Route path="/claim" element={<Claim />} />
+          <Route path="/raise_ticket" element={<RaiseTicket />} />
+          {<Route path="/login" element={<Login />} />}
+          {<Route path="/register" element={<Register />} />}
+          <Route path="/offer" element={<Offers />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/product/:id" element={<Product />} />
 
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/customReq" element={<CustomItemReq />} />
-        <Route path="/addproduct" element={<AddProduct />} />
-        <Route path="/reviewcard" element={<ReviewCard />} />
-        <Route
-          path="/success/:Urlname/:email/:Urladdress/:Urlmethod/:orderNum"
-          element={<Success />}
-        />
-      </Routes>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/customReq" element={<CustomItemReq />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+          <Route path="/reviewcard" element={<ReviewCard />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route
+            path="/success/:Urlname/:email/:Urladdress/:Urlmethod/:orderNum"
+            element={<Success />}
+          />
+        </Routes>
+      </div>
       <Footer />
     </BrowserRouter>
   );

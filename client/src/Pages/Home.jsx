@@ -11,6 +11,7 @@ import InsuranceCardData from "../data/insuranceCardData";
 import InvestmentCardData from "../data/investmentCardData";
 import AchievementSection from "../components/AchievementSection/AchievementSection";
 import achievementInfo from "../data/achievementInfo";
+import Partners from "../components/Home/Partners";
 
 function Home() {
   const dispatch = useDispatch();
@@ -148,6 +149,7 @@ function Home() {
           <InsuranceList title={"Investment"} CardData={InvestmentCardData} />
         </div>
         <AchievementSection achievementInfo={achievementInfo} />
+        <Partners />
       </div>
     </>
   );

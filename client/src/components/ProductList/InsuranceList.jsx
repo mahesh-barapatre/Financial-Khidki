@@ -16,7 +16,8 @@ const InsuranceList = ({ title, CardData }) => {
             title1={item.title1}
             title2={item.title2}
             description={item.description}
-            image={item.image}
+            icon={item.icon}
+            img={item.img}
           />
         ))}
         <div
