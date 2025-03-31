@@ -79,7 +79,7 @@ const SocialCard = ({ item }) => {
         <Icon icon={item.icon} width="24" />
       ) : (
         <img
-          src="../../../public/images/10464408.png"
+          src="/images/10464408.png"
           alt="logo"
           className="w-12 relative bottom-3 right-3"
         />
