@@ -84,14 +84,21 @@ function Header() {
           id="special_btn"
         >
           <div
+            onClick={() => navigate("/help")}
+            className="flex rounded-lg justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
+          >
+            <Icon icon={"material-symbols:call"} />
+            <div>TALK TO EXPERT</div>
+          </div>
+          <div
             onClick={() => navigate("/")}
-            className="flex justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
+            className="flex rounded-lg justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
           >
             <div>BECOME OUR PARTNER</div>
           </div>
           <div
             onClick={() => navigate("/login")}
-            className="flex justify-center items-center flex-row hover:text-white cursor-pointer hover:bg-blue-500 text-blue-500 border-solid border-blue-500 border-2 p-1"
+            className="flex justify-center items-center flex-row bg-blue-800 text-white hover:scale-125 transition-all ease-in-out duration-100 cursor-pointer p-2 rounded-full"
           >
             <div>LOGIN</div>
           </div>
@@ -99,7 +106,7 @@ function Header() {
       </div>
 
       {/* header second layer */}
-      <div className="flex flex-col w-full bg-gray-200 p-3 ">
+      <div className="flex flex-col w-full bg-blue-800 text-white p-3 ">
         {/* Burger Button (Mobile Only) */}
         <button onClick={() => dispatch(toggleHam())} className="md:hidden p-2">
           <Icon

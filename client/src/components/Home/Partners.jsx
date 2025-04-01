@@ -2,22 +2,22 @@ import React from "react";
 
 const Partners = () => {
   const partnersLogo = [
-    "../../../public/images/partners/bajaj allianz.png",
-    "../../../public/images/partners/chola ms insurance.png",
-    "../../../public/images/partners/digit insurance.png",
-    "../../../public/images/partners/future general insurance.png",
-    "../../../public/images/partners/hdfc ergo.png",
-    "../../../public/images/partners/icici lamboard.png",
-    "../../../public/images/partners/iffco tokio.png",
-    "../../../public/images/partners/magma.png",
-    "../../../public/images/partners/National-Insurance.png",
-    "../../../public/images/partners/new india.png",
-    "../../../public/images/partners/oriental insurance.png",
-    "../../../public/images/partners/reliance general.png",
-    "../../../public/images/partners/sbi general.png",
-    "../../../public/images/partners/shriram.png",
-    "../../../public/images/partners/united india.png",
-    "../../../public/images/partners/univeral sampo.png",
+    "/images/partners/bajaj allianz.png",
+    "/images/partners/chola ms insurance.png",
+    "/images/partners/digit insurance.png",
+    "/images/partners/future general insurance.png",
+    "/images/partners/hdfc ergo.png",
+    "/images/partners/icici lamboard.png",
+    "/images/partners/iffco tokio.png",
+    "/images/partners/magma.png",
+    "/images/partners/National-Insurance.png",
+    "/images/partners/new india.png",
+    "/images/partners/oriental insurance.png",
+    "/images/partners/reliance general.png",
+    "/images/partners/sbi general.png",
+    "/images/partners/shriram.png",
+    "/images/partners/united india.png",
+    "/images/partners/univeral sampo.png",
   ];
   return (
     <div className="w-full bg-white flex flex-col p-8">
