@@ -69,9 +69,9 @@ function Header() {
     "transform cursor-pointer hover:scale-150 transition-transform duration-300 ease-in-out";
 
   return (
-    <div className="flex flex-col justify-between items-center shadow-lg py-3 sm:pl-10 w-full fixed top-0 bg-white z-50">
+    <div className="flex flex-col justify-between items-center shadow-lg w-full fixed top-0 bg-white z-50">
       {/* header first layer */}
-      <div className="w-full pl-5 flex justify-between">
+      <div className="w-full pl-5 py-2 flex justify-between">
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
         <div className="text-xl font-extrabold text-blue-500">
           Financial Khidki
@@ -99,7 +99,7 @@ function Header() {
       </div>
 
       {/* header second layer */}
-      <div className="flex flex-col w-full sm:w-4/5">
+      <div className="flex flex-col w-full bg-gray-200 p-3 ">
         {/* Burger Button (Mobile Only) */}
         <button onClick={() => dispatch(toggleHam())} className="md:hidden p-2">
           <Icon
