@@ -18,7 +18,7 @@ import CustomItemReq from "./Pages/CustomItemReq";
 import Claim from "./Pages/Claim";
 import RaiseTicket from "./Pages/RaiseTicket";
 import AboutUs from "./Pages/AboutUs/AboutUs";
-import HealthInsurance from "./Pages/HealthInsurance/HealthInsurance";
+// import HealthInsurance from "./Pages/HealthInsurance/HealthInsurance";
 
 function App() {
   return (
