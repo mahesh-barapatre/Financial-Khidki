@@ -18,7 +18,6 @@ import CustomItemReq from "./Pages/CustomItemReq";
 import Claim from "./Pages/Claim";
 import RaiseTicket from "./Pages/RaiseTicket";
 import AboutUs from "./Pages/AboutUs/AboutUs";
-// import HealthInsurance from "./Pages/HealthInsurance/HealthInsurance";
 
 function App() {
   return (
@@ -27,12 +26,10 @@ function App() {
       <div className="mt-20">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/healthInsurance" element={<HealthInsurance />} />
           <Route path="/help" element={<CustomerCare />} />
           <Route path="/claim" element={<Claim />} />
           <Route path="/raise_ticket" element={<RaiseTicket />} />
           {<Route path="/login" element={<Login />} />}
-
           {<Route path="/register" element={<Register />} />}
           <Route path="/offer" element={<Offers />} />
           <Route path="/cart" element={<Cart />} />

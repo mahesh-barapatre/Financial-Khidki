@@ -10,8 +10,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* @import "tailwindcss"; */
-
 .gradient {
   background: linear-gradient(90deg, rgb(114, 152, 249), rgb(218, 52, 255));
 }

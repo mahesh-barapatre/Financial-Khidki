@@ -16,7 +16,7 @@ function Footer() {
         <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Insurance</h6>
           <p>General Insurance</p>
-          <p onClick={() => navigate("/healthInsurance")}>Life Insurance</p>
+          <p>Life Insurance</p>
           <p>Term Insurance</p>
           <p>Investment</p>
           <p>Health Insurance</p>

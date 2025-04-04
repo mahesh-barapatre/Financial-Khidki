@@ -24,12 +24,6 @@ const InsuranceCardData = [
     icon: "twemoji:umbrella",
   },
   {
-    title1: "Life ",
-    title2: "Insurance",
-    description: "Upto 15% Discount",
-    icon: "twemoji:family",
-  },
-  {
     title1: "Health",
     title2: "Insurance",
     description: "FREE Home Visit",
