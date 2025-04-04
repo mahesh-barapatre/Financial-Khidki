@@ -128,7 +128,7 @@ function Header() {
               <div
                 onClick={() => navigate(`${item.navigate}`)}
                 key={key}
-                className="flex justify-center items-center flex-col hover:text-blue-500 cursor-pointer hover:underline"
+                className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
               >
                 <div>{item.name}</div>
               </div>
@@ -140,7 +140,7 @@ function Header() {
               <div
                 onClick={() => navigate(`${item.navigate}`)}
                 key={key}
-                className="flex  justify-center items-center flex-col hover:text-blue-500 cursor-pointer hover:underline"
+                className="flex  justify-center items-center flex-col  cursor-pointer hover:underline"
               >
                 <div>{item.name}</div>
               </div>
@@ -153,7 +153,7 @@ function Header() {
               <div
                 onClick={() => navigate(`${item.navigate}`)}
                 key={key}
-                className="flex justify-center items-center flex-col hover:text-blue-500 cursor-pointer hover:underline"
+                className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
               >
                 <div>{item.name}</div>
               </div>
