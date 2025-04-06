@@ -19,7 +19,7 @@ const HealthInsurance = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxJg083rSPWJeIRz1y4QdKSgM1uqJ7WPRKoznhdwg2HrMUeF-ThcsDFSgDo2DGGOGwN/exec",
+        "https://script.google.com/macros/s/AKfycbzgyx7G6mKKDycbyInNl2FgZKIhJWK6pzlOS9fsnXMAatDEz9diE9DzuRNVz_9rn725/exec",
         {
           method: "POST",
           body: formData,

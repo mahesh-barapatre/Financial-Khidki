@@ -12,10 +12,6 @@ export const headerNavigations2 = [
 ];
 export const headerNavigations3 = [
   {
-    navigate: "/",
-    name: "News",
-  },
-  {
     navigate: "/help",
     name: "Contact Us",
   },
