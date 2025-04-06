@@ -1,5 +1,5 @@
-import { Icon } from '@iconify/react';
-import React, { useState, useEffect } from 'react';
+import { Icon } from "@iconify/react";
+import React, { useState, useEffect } from "react";
 
 const Carousel = ({ images, autoplayInterval = 3000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,7 +9,9 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
   };
 
   const goToPrevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + images.length) % images.length,
+    );
   };
 
   useEffect(() => {
@@ -30,7 +32,11 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
       >
         {images.map((image, index) => (
           <div key={index} className="w-full flex-shrink-0">
-            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-64 object-cover" />
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-40 md:h-64 object-cover"
+            />
           </div>
         ))}
       </div>
@@ -41,7 +47,7 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
       >
         <Icon icon="icon-park-solid:left-c" width="40" />
       </button>
-      <button 
+      <button
         onClick={goToNextSlide}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 text-purple-500 px-4 py-2 rounded"
       >

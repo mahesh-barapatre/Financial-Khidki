@@ -5,7 +5,7 @@ export const healthInsuranceField = [
     type: "select",
     options: [
       { label: "Term Life Insurance", value: "term" },
-      { label: "Life Life Insurance", value: "life" },
+      { label: "Life Insurance", value: "life" },
       { label: "Accidental Insurance", value: "accidental" },
       { label: "Health Insurance", value: "health" },
     ],
