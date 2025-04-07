@@ -141,10 +141,10 @@ function Home() {
   return (
     <>
       <div className="flex flex-col w-full h-full justify-center items-center bg-gray-50">
-        <div className="w-full sm:w-4/5 p-10 flex flex-col">
+        <div className="w-full p-10 flex flex-col">
           <Filter />
         </div>
-        <div className="flex flex-col w-4/5 mt-10">
+        <div className="flex flex-col w-full p-2 md:w-4/5 md:mt-10">
           <InsuranceList title={"Insurance"} CardData={InsuranceCardData} />
           <InsuranceList title={"Investment"} CardData={InvestmentCardData} />
         </div>

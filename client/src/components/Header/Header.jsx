@@ -29,12 +29,12 @@ function Header() {
     "transform cursor-pointer hover:scale-150 transition-transform duration-300 ease-in-out";
 
   return (
-    <div className="flex flex-col justify-evenly items-center shadow-lg w-full fixed top-0 bg-white z-50 p-3">
+    <div className="flex flex-col h-20 justify-evenly items-center shadow-lg w-full fixed top-0 bg-white z-50 p-3">
       {/* header first layer */}
-      <div className="w-full flex justify-evenly">
+      <div className="w-full flex justify-between">
         <div
           onClick={() => setNavShow((prev) => !prev)}
-          className="fixed sm:hidden z-50 p-2 rounded-full top-3 left-1"
+          className="fixed sm:hidden z-50 p-2 rounded-full top-4 left-1"
         >
           <Icon
             icon={navShow ? "mdi:close" : "mdi:menu"}
@@ -43,7 +43,7 @@ function Header() {
           />
         </div>
         <div
-          className={`md:hidden absolute z-50 w-4/5 md:static md:left-0 transform ease-in-out duration-500 ${view}`}
+          className={`md:hidden absolute z-50 w-4/5 md:static top-0 md:left-0 transform ease-in-out duration-500 ${view}`}
         >
           <SideNav ref={menuRef} isOpen={navShow} setNavShow={setNavShow} />
         </div>
@@ -100,7 +100,7 @@ function Header() {
             })}
           </div>
         </div>
-        <div className="flex w-1/5 justify-center" id="special_btn">
+        <div className="flex w-1/6 justify-center" id="special_btn">
           <div
             onClick={() => navigate("/help")}
             onMouseEnter={() => setHovered(true)}
