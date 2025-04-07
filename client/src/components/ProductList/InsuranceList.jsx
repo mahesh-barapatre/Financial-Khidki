@@ -9,7 +9,7 @@ const InsuranceList = ({ title, CardData }) => {
   return (
     <div>
       <h1 className="text-xl font-semibold">{title}</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-4 justify-center shadow-lg rounded-2xl bg-white p-10 m-3">
+      <div className="grid grid-cols-3 md:grid-cols-4 justify-center shadow-lg rounded-2xl bg-white p-2 md:p-10 m-3">
         {CardData.map((item, index) => (
           <InsuranceCard
             key={index}

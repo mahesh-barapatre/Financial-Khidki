@@ -10,10 +10,16 @@ const AchievementCard = ({ achievementInfo }) => {
           "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
       }}
     >
-      <Icon icon={achievementInfo.image} width={"40"} className="m-3"></Icon>
+      <Icon
+        icon={achievementInfo.image}
+        width={"40"}
+        className="m-1 md:m-3"
+      ></Icon>
       <div className="flex flex-col">
-        <div className="text-xl ">{achievementInfo.title1}</div>
-        <div className="text-sm text-gray-600">{achievementInfo.title2}</div>
+        <div className="text-sm md:text-xl ">{achievementInfo.title1}</div>
+        <div className="text-xs md:text-sm text-gray-600">
+          {achievementInfo.title2}
+        </div>
       </div>
     </div>
   );

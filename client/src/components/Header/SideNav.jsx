@@ -27,68 +27,87 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
   };
 
   return (
-    <div ref={menuRef} className="w-full h-screen p-5 flex flex-col bg-blue-50">
-      {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
-      <div className="text-xl font-extrabold text-blue-500">
-        Financial Khidki
-      </div>
-      <div
-        className="absolute text-lg font-semibold top-2 right-1"
-        onClick={() => setNavShow(false)}
-      >
-        X
-      </div>
-      {/* <div className="text-3xl">
+    <div
+      ref={menuRef}
+      className="w-full justify-between h-screen p-5 flex flex-col bg-blue-50"
+    >
+      <div>
+        {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
+        <div className="text-xl font-extrabold text-blue-500">
+          Financial Khidki
+        </div>
+        <div
+          className="absolute text-lg font-semibold top-2 right-2 bg-red-500 px-2 rounded-full text-white"
+          onClick={() => setNavShow(false)}
+        >
+          X
+        </div>
+        {/* <div className="text-3xl">
           Let's find you the <span className="font-bold">Best Insurance</span>
         </div> */}
-      {/* header middle layer */}
-      <div className="flex flex-col justify-start items-start w-full text-black font-semibold p-3 ">
-        {/* header nav tab- sm */}
+        {/* header middle layer */}
+        <div className="flex flex-col mt-16 space-y-8 justify-start items-start w-full text-black font-semibold p-3 ">
+          {/* header nav tab- sm */}
 
-        {headerNavigations1.map((item, key) => {
-          return (
-            <div
-              onClick={() => navigate(`${item.navigate}`)}
-              key={key}
-              className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
-            >
-              <div>{item.name}</div>
-            </div>
-          );
-        })}
-        <MultiLevelDropdown menuData={Products} name={"Products"} />
-        {headerNavigations2.map((item, key) => {
-          return (
-            <div
-              onClick={() => navigate(`${item.navigate}`)}
-              key={key}
-              className="flex  justify-center items-center flex-col  cursor-pointer hover:underline"
-            >
-              <div>{item.name}</div>
-            </div>
-          );
-        })}
-        <MultiLevelDropdown menuData={Calculator} name={"Calculator"} />
-        <MultiLevelDropdown menuData={RaiseTicket} name={"Raise Ticket"} />
-        {headerNavigations3.map((item, key) => {
-          return (
-            <div
-              onClick={() => navigate(`${item.navigate}`)}
-              key={key}
-              className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
-            >
-              <div>{item.name}</div>
-            </div>
-          );
-        })}
+          {headerNavigations1.map((item, key) => {
+            return (
+              <div
+                onClick={() => {
+                  setNavShow(false);
+                  navigate(`${item.navigate}`);
+                }}
+                key={key}
+                className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
+              >
+                <div>{item.name}</div>
+              </div>
+            );
+          })}
+          <MultiLevelDropdown menuData={Products} name={"Products"} />
+          {headerNavigations2.map((item, key) => {
+            return (
+              <div
+                onClick={() => {
+                  setNavShow(false);
+                  navigate(`${item.navigate}`);
+                }}
+                key={key}
+                className="flex  justify-center items-center flex-col  cursor-pointer hover:underline"
+              >
+                <div>{item.name}</div>
+              </div>
+            );
+          })}
+          <MultiLevelDropdown menuData={Calculator} name={"Calculator"} />
+          <MultiLevelDropdown menuData={RaiseTicket} name={"Raise Ticket"} />
+          {headerNavigations3.map((item, key) => {
+            return (
+              <div
+                onClick={() => {
+                  setNavShow(false);
+                  navigate(`${item.navigate}`);
+                }}
+                key={key}
+                className="flex justify-center items-center flex-col  cursor-pointer hover:underline"
+              >
+                <div>{item.name}</div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-
-      <div className="flex w-full justify-center" id="special_btn">
+      <div
+        className="w-4/5 bg-red-500 p-1 rounded-full text-white justify-center"
+        id="special_btn"
+      >
         <div
-          onClick={() => navigate("/help")}
+          onClick={() => {
+            setNavShow(false);
+            navigate("/help");
+          }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="flex text-sm justify-center items-center flex-row cursor-pointer hover:text-blue-500"
+          className="flex text-sm justify-center items-center flex-row cursor-pointer"
         >
           <Icon icon={"material-symbols:call"} />
           <div className="ml-1">
