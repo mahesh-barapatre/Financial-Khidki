@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-export default function InsuranceClaimForm() {
+export default function SMEInsuranceForm() {
   const [formData, setFormData] = useState({
     type: "",
     name: "",
     mobile: "",
-    policyNumber: "",
-    expiryDate: "",
+    pincode: "",
     remark: "",
   });
 
@@ -25,7 +24,7 @@ export default function InsuranceClaimForm() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyc-njEqCC6uvnDaINT5PfJiSAG7hI0YX2iFIlsMW2OpObQi4DkeZDosBhhtEAxgHsJ6Q/exec",
+        "https://script.google.com/macros/s/AKfycbx4Km29-UGlkXK5TIVA9z1gpL0Sxi-67yOk3BaZ6lWG6Y6i6jpBMECz9L03JoHhOUGdXQ/exec",
         {
           method: "POST",
           body: form,
@@ -34,20 +33,19 @@ export default function InsuranceClaimForm() {
 
       const result = await response.json();
       if (result.status === "success") {
-        alert("Submitted Successfully!");
+        alert("Form submitted successfully!");
         setFormData({
           type: "",
           name: "",
           mobile: "",
-          policyNumber: "",
-          expiryDate: "",
+          pincode: "",
           remark: "",
         });
       } else {
         alert("Error: " + result.message);
       }
     } catch (err) {
-      console.error("Submission failed:", err);
+      console.error("Error:", err);
       alert("Something went wrong!");
     }
   };
@@ -55,12 +53,12 @@ export default function InsuranceClaimForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow space-y-4"
+      className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
     >
-      <h2 className="text-2xl font-bold text-center">Insurance Claim Form</h2>
+      <h2 className="text-xl font-semibold text-center">SME Insurance Form</h2>
 
       <div>
-        <label className="block font-medium">Type of Product</label>
+        <label className="block font-medium">Type</label>
         <select
           name="type"
           value={formData.type}
@@ -69,16 +67,11 @@ export default function InsuranceClaimForm() {
           className="w-full border p-2 rounded"
         >
           <option value="">Select Type</option>
-          <option value="Bike">Bike</option>
-          <option value="Cars">Cars</option>
-          <option value="Commercial Vehicle">Commercial Vehicle</option>
-          <option value="Health Insurance">Health Insurance</option>
-          <option value="Life Insurance">Life Insurance</option>
-          <option value="Personal Accidental">Personal Accidental</option>
-          <option value="Term Insurance">Term Insurance</option>
-          <option value="SME">SME</option>
-          <option value="Travel">Travel</option>
-          <option value="Others">Others</option>
+          <option value="Fire Insurance">Fire Insurance</option>
+          <option value="Home Insurance">Home Insurance</option>
+          <option value="Specific Marine">Specific Marine</option>
+          <option value="CPM">CPM</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
@@ -109,23 +102,14 @@ export default function InsuranceClaimForm() {
       </div>
 
       <div>
-        <label className="block font-medium">Policy Number</label>
+        <label className="block font-medium">Pincode</label>
         <input
           type="text"
-          name="policyNumber"
-          value={formData.policyNumber}
+          name="pincode"
+          value={formData.pincode}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
-        />
-      </div>
-
-      <div>
-        <label className="block font-medium">Expiry Date</label>
-        <input
-          type="date"
-          name="expiryDate"
-          value={formData.expiryDate}
-          onChange={handleChange}
+          required
+          pattern="[0-9]{6}"
           className="w-full border p-2 rounded"
         />
       </div>
