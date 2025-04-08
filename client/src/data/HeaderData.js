@@ -4,8 +4,8 @@ export const Calculator = [
 ];
 
 export const RaiseTicket = [
-  { name: "Create Ticket", url: "/profile" },
-  { name: "Track Ticket", url: "/settings" },
+  { name: "Create Ticket", url: "/createticket" },
+  { name: "Track Ticket", url: "/track" },
 ];
 
 export const Products = [

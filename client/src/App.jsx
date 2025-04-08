@@ -9,6 +9,14 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import HealthInsurance from "./Pages/HealthInsurance/HealthInsurance.jsx";
 import VehicleForm from "./Pages/VechicleForm/VechicleForm.jsx";
 import SideNav from "./components/Header/SideNav.jsx";
+import MotorForm from "./Pages/Forms/MotorForm.jsx";
+import InsuranceForm from "./Pages/Forms/HealthForm.jsx";
+import TravelInsuranceForm from "./Pages/Forms/TravelForm.jsx";
+import SMEInsuranceForm from "./Pages/Forms/SMEForm.jsx";
+import InvestmentForm from "./Pages/Forms/InvestmentForm.jsx";
+import TrackTicket from "./Pages/Ticket/TrackTicket.jsx";
+import CreateTicketForm from "./Pages/Ticket/CreateTicket.jsx";
+import BecomePartnerForm from "./Pages/BecomeOurAgent.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +32,14 @@ function App() {
 
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/vechicleform" element={<VehicleForm />} />
+          <Route path="/motorform" element={<MotorForm />} />
+          <Route path="/healthform" element={<InsuranceForm />} />
+          <Route path="/travelform" element={<TravelInsuranceForm />} />
+          <Route path="/smeform" element={<SMEInsuranceForm />} />
+          <Route path="/investmentform" element={<InvestmentForm />} />
+          <Route path="/track" element={<TrackTicket />} />
+          <Route path="/createticket" element={<CreateTicketForm />} />
+          <Route path="/becomeourAgent" element={<BecomePartnerForm />} />
         </Routes>
       </div>
       <Footer />

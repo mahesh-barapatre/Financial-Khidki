@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-export default function InsuranceClaimForm() {
+export default function BecomePartnerForm() {
   const [formData, setFormData] = useState({
-    type: "",
     name: "",
     mobile: "",
-    policyNumber: "",
-    expiryDate: "",
-    remark: "",
+    email: "",
+    experience: "",
   });
 
   const handleChange = (e) => {
@@ -25,7 +23,7 @@ export default function InsuranceClaimForm() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyc-njEqCC6uvnDaINT5PfJiSAG7hI0YX2iFIlsMW2OpObQi4DkeZDosBhhtEAxgHsJ6Q/exec",
+        "https://script.google.com/macros/s/AKfycbwGyCdecNlrVNMYtDONV_ekN_asZa2Fp40XgPsQEq7-wxXKzzuKggZsBXV9Q3JDm83d/exec",
         {
           method: "POST",
           body: form,
@@ -36,18 +34,16 @@ export default function InsuranceClaimForm() {
       if (result.status === "success") {
         alert("Submitted Successfully!");
         setFormData({
-          type: "",
           name: "",
           mobile: "",
-          policyNumber: "",
-          expiryDate: "",
-          remark: "",
+          email: "",
+          experience: "",
         });
       } else {
         alert("Error: " + result.message);
       }
     } catch (err) {
-      console.error("Submission failed:", err);
+      console.error("Error submitting form:", err);
       alert("Something went wrong!");
     }
   };
@@ -57,30 +53,7 @@ export default function InsuranceClaimForm() {
       onSubmit={handleSubmit}
       className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow space-y-4"
     >
-      <h2 className="text-2xl font-bold text-center">Insurance Claim Form</h2>
-
-      <div>
-        <label className="block font-medium">Type of Product</label>
-        <select
-          name="type"
-          value={formData.type}
-          onChange={handleChange}
-          required
-          className="w-full border p-2 rounded"
-        >
-          <option value="">Select Type</option>
-          <option value="Bike">Bike</option>
-          <option value="Cars">Cars</option>
-          <option value="Commercial Vehicle">Commercial Vehicle</option>
-          <option value="Health Insurance">Health Insurance</option>
-          <option value="Life Insurance">Life Insurance</option>
-          <option value="Personal Accidental">Personal Accidental</option>
-          <option value="Term Insurance">Term Insurance</option>
-          <option value="SME">SME</option>
-          <option value="Travel">Travel</option>
-          <option value="Others">Others</option>
-        </select>
-      </div>
+      <h2 className="text-2xl font-bold text-center">Become Our Agent</h2>
 
       <div>
         <label className="block font-medium">Name</label>
@@ -103,42 +76,39 @@ export default function InsuranceClaimForm() {
           onChange={handleChange}
           required
           pattern="[0-9]{10}"
-          placeholder="10-digit number"
           className="w-full border p-2 rounded"
+          placeholder="10-digit mobile number"
         />
       </div>
 
       <div>
-        <label className="block font-medium">Policy Number</label>
+        <label className="block font-medium">Email</label>
         <input
-          type="text"
-          name="policyNumber"
-          value={formData.policyNumber}
+          type="email"
+          name="email"
+          value={formData.email}
           onChange={handleChange}
+          required
           className="w-full border p-2 rounded"
+          placeholder="example@email.com"
         />
       </div>
 
       <div>
-        <label className="block font-medium">Expiry Date</label>
-        <input
-          type="date"
-          name="expiryDate"
-          value={formData.expiryDate}
+        <label className="block font-medium">Experience</label>
+        <select
+          name="experience"
+          value={formData.experience}
           onChange={handleChange}
+          required
           className="w-full border p-2 rounded"
-        />
-      </div>
-
-      <div>
-        <label className="block font-medium">Remark</label>
-        <textarea
-          name="remark"
-          value={formData.remark}
-          onChange={handleChange}
-          rows="3"
-          className="w-full border p-2 rounded"
-        />
+        >
+          <option value="">Select Experience</option>
+          <option value="0 year">0 year</option>
+          <option value="1 year">1 year</option>
+          <option value="2 year">2 year</option>
+          <option value="2+ year">2+ year</option>
+        </select>
       </div>
 
       <button

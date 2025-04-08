@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
-export default function InsuranceClaimForm() {
+export default function TravelInsuranceForm() {
   const [formData, setFormData] = useState({
     type: "",
     name: "",
     mobile: "",
-    policyNumber: "",
-    expiryDate: "",
+    tripFromDate: "",
+    tripToDate: "",
+    tripFromLocation: "",
+    tripToLocation: "",
     remark: "",
   });
 
@@ -25,7 +27,7 @@ export default function InsuranceClaimForm() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyc-njEqCC6uvnDaINT5PfJiSAG7hI0YX2iFIlsMW2OpObQi4DkeZDosBhhtEAxgHsJ6Q/exec",
+        "https://script.google.com/macros/s/AKfycbxiVyrf2z2mfe_DQPaCCh0P9MvsTVBVTLkMxCQMMOtV6YI1vwivCBh6nWcDmsTXKa6G8Q/exec",
         {
           method: "POST",
           body: form,
@@ -34,20 +36,22 @@ export default function InsuranceClaimForm() {
 
       const result = await response.json();
       if (result.status === "success") {
-        alert("Submitted Successfully!");
+        alert("Form submitted successfully!");
         setFormData({
           type: "",
           name: "",
           mobile: "",
-          policyNumber: "",
-          expiryDate: "",
+          tripFromDate: "",
+          tripToDate: "",
+          tripFromLocation: "",
+          tripToLocation: "",
           remark: "",
         });
       } else {
         alert("Error: " + result.message);
       }
     } catch (err) {
-      console.error("Submission failed:", err);
+      console.error("Error:", err);
       alert("Something went wrong!");
     }
   };
@@ -55,12 +59,14 @@ export default function InsuranceClaimForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow space-y-4"
+      className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
     >
-      <h2 className="text-2xl font-bold text-center">Insurance Claim Form</h2>
+      <h2 className="text-2xl font-semibold text-center mb-4">
+        Travel Insurance Form
+      </h2>
 
       <div>
-        <label className="block font-medium">Type of Product</label>
+        <label className="block font-medium">Type</label>
         <select
           name="type"
           value={formData.type}
@@ -69,16 +75,8 @@ export default function InsuranceClaimForm() {
           className="w-full border p-2 rounded"
         >
           <option value="">Select Type</option>
-          <option value="Bike">Bike</option>
-          <option value="Cars">Cars</option>
-          <option value="Commercial Vehicle">Commercial Vehicle</option>
-          <option value="Health Insurance">Health Insurance</option>
-          <option value="Life Insurance">Life Insurance</option>
-          <option value="Personal Accidental">Personal Accidental</option>
-          <option value="Term Insurance">Term Insurance</option>
-          <option value="SME">SME</option>
-          <option value="Travel">Travel</option>
-          <option value="Others">Others</option>
+          <option value="Personal">Personal</option>
+          <option value="Group">Group</option>
         </select>
       </div>
 
@@ -103,31 +101,59 @@ export default function InsuranceClaimForm() {
           onChange={handleChange}
           required
           pattern="[0-9]{10}"
-          placeholder="10-digit number"
+          placeholder="10-digit mobile number"
           className="w-full border p-2 rounded"
         />
       </div>
 
-      <div>
-        <label className="block font-medium">Policy Number</label>
-        <input
-          type="text"
-          name="policyNumber"
-          value={formData.policyNumber}
-          onChange={handleChange}
-          className="w-full border p-2 rounded"
-        />
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block font-medium">Trip From Date</label>
+          <input
+            type="date"
+            name="tripFromDate"
+            value={formData.tripFromDate}
+            onChange={handleChange}
+            required
+            className="w-full border p-2 rounded"
+          />
+        </div>
+        <div>
+          <label className="block font-medium">Trip To Date</label>
+          <input
+            type="date"
+            name="tripToDate"
+            value={formData.tripToDate}
+            onChange={handleChange}
+            required
+            className="w-full border p-2 rounded"
+          />
+        </div>
       </div>
 
-      <div>
-        <label className="block font-medium">Expiry Date</label>
-        <input
-          type="date"
-          name="expiryDate"
-          value={formData.expiryDate}
-          onChange={handleChange}
-          className="w-full border p-2 rounded"
-        />
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="block font-medium">From Location</label>
+          <input
+            type="text"
+            name="tripFromLocation"
+            value={formData.tripFromLocation}
+            onChange={handleChange}
+            required
+            className="w-full border p-2 rounded"
+          />
+        </div>
+        <div>
+          <label className="block font-medium">To Location</label>
+          <input
+            type="text"
+            name="tripToLocation"
+            value={formData.tripToLocation}
+            onChange={handleChange}
+            required
+            className="w-full border p-2 rounded"
+          />
+        </div>
       </div>
 
       <div>
