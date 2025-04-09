@@ -29,12 +29,12 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
   return (
     <div
       ref={menuRef}
-      className="w-full justify-between h-screen p-5 flex flex-col bg-blue-50"
+      className="w-full justify-evenly h-screen p-5 flex flex-col bg-blue-50"
     >
       <div>
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
-        <div className="text-xl font-extrabold text-blue-500">
-          Financial Khidki
+        <div className="text-xl ml-12 font-extrabold text-blue-500">
+          <img src="/images/logo_finan.png" className="h-16 w-44" />
         </div>
         <div
           className="absolute text-lg font-semibold top-2 right-2 bg-red-500 px-2 rounded-full text-white"

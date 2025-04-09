@@ -41,6 +41,12 @@ const InsuranceCardData = [
     description: "In-Built Life Cover",
     icon: "fluent-color:savings-16",
   },
+  {
+    title1: "Other",
+    title2: "",
+    description: "10+ Insurances",
+    icon: "material-icon-theme:folder-other",
+  },
 ];
 
 export default InsuranceCardData;

@@ -49,7 +49,7 @@ function Header() {
         </div>
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
         <div className="text-xl ml-12 font-extrabold text-blue-500">
-          Financial Khidki
+          <img src="/images/logo_finan.png" className="h-16 w-72" />
         </div>
         {/* <div className="text-3xl">
           Let's find you the <span className="font-bold">Best Insurance</span>
@@ -100,7 +100,7 @@ function Header() {
             })}
           </div>
         </div>
-        <div className="flex w-1/6 justify-center" id="special_btn">
+        <div className="flex md:w-1/6 justify-center" id="special_btn">
           <div
             onClick={() => navigate("/help")}
             onMouseEnter={() => setHovered(true)}

@@ -57,7 +57,7 @@ export default function InsuranceForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg space-y-4"
+      className="max-w-lg mt-36 mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
     >
       <h2 className="text-xl font-bold mb-4">Insurance Form</h2>
 
@@ -143,7 +143,7 @@ export default function InsuranceForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+        className="w-full bg-green-600 text-white font-semibold py-2 px-4 rounded hover:bg-green-700"
       >
         Submit
       </button>

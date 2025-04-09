@@ -20,7 +20,7 @@ const Partners = () => {
     "/images/partners/univeral sampo.png",
   ];
   return (
-    <div className="w-full bg-white flex flex-col p-8 md:pl-20">
+    <div className="w-full bg-white flex flex-col pl-12 md:pl-40">
       <div className="text-3xl font-bold text-blue-500 mb-5">Our Partners</div>
       <div className="grid grid-cols-3 md:grid-cols-5 items-center align-middle space-y-4">
         {partnersLogo.map((logo, i) => (

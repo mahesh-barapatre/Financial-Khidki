@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-export default function InsuranceClaimForm() {
+export default function OtherInsuranceForm() {
   const [formData, setFormData] = useState({
-    type: "",
+    insuranceName: "",
     name: "",
     mobile: "",
-    policyNumber: "",
-    expiryDate: "",
     remark: "",
   });
 
@@ -25,7 +23,7 @@ export default function InsuranceClaimForm() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyc-njEqCC6uvnDaINT5PfJiSAG7hI0YX2iFIlsMW2OpObQi4DkeZDosBhhtEAxgHsJ6Q/exec",
+        "https://script.google.com/macros/s/AKfycby6GI0xo1ORYbfxBixUZQRmMncCalZ-X64gQltzpYyaQYnqCJyBZMlGG4-isqukOrT0yQ/exec", // replace with your deployed URL
         {
           method: "POST",
           body: form,
@@ -36,18 +34,16 @@ export default function InsuranceClaimForm() {
       if (result.status === "success") {
         alert("Submitted Successfully!");
         setFormData({
-          type: "",
+          insuranceName: "",
           name: "",
           mobile: "",
-          policyNumber: "",
-          expiryDate: "",
           remark: "",
         });
       } else {
         alert("Error: " + result.message);
       }
     } catch (err) {
-      console.error("Submission failed:", err);
+      console.error("Submission error:", err);
       alert("Something went wrong!");
     }
   };
@@ -57,29 +53,18 @@ export default function InsuranceClaimForm() {
       onSubmit={handleSubmit}
       className="max-w-xl mt-36 mx-auto p-6 bg-white rounded-lg shadow space-y-4"
     >
-      <h2 className="text-2xl font-bold text-center">Insurance Claim Form</h2>
+      <h2 className="text-2xl font-bold text-center">Other Insurance Form</h2>
 
       <div>
-        <label className="block font-medium">Type of Product</label>
-        <select
-          name="type"
-          value={formData.type}
+        <label className="block font-medium">Name of Insurance</label>
+        <input
+          type="text"
+          name="insuranceName"
+          value={formData.insuranceName}
           onChange={handleChange}
           required
           className="w-full border p-2 rounded"
-        >
-          <option value="">Select Type</option>
-          <option value="Bike">Bike</option>
-          <option value="Cars">Cars</option>
-          <option value="Commercial Vehicle">Commercial Vehicle</option>
-          <option value="Health Insurance">Health Insurance</option>
-          <option value="Life Insurance">Life Insurance</option>
-          <option value="Personal Accidental">Personal Accidental</option>
-          <option value="Term Insurance">Term Insurance</option>
-          <option value="SME">SME</option>
-          <option value="Travel">Travel</option>
-          <option value="Others">Others</option>
-        </select>
+        />
       </div>
 
       <div>
@@ -101,32 +86,10 @@ export default function InsuranceClaimForm() {
           name="mobile"
           value={formData.mobile}
           onChange={handleChange}
-          required
           pattern="[0-9]{10}"
-          placeholder="10-digit number"
+          required
           className="w-full border p-2 rounded"
-        />
-      </div>
-
-      <div>
-        <label className="block font-medium">Policy Number</label>
-        <input
-          type="text"
-          name="policyNumber"
-          value={formData.policyNumber}
-          onChange={handleChange}
-          className="w-full border p-2 rounded"
-        />
-      </div>
-
-      <div>
-        <label className="block font-medium">Expiry Date</label>
-        <input
-          type="date"
-          name="expiryDate"
-          value={formData.expiryDate}
-          onChange={handleChange}
-          className="w-full border p-2 rounded"
+          placeholder="10-digit mobile number"
         />
       </div>
 
@@ -136,14 +99,15 @@ export default function InsuranceClaimForm() {
           name="remark"
           value={formData.remark}
           onChange={handleChange}
-          rows="3"
           className="w-full border p-2 rounded"
+          rows={3}
+          placeholder="Any additional comments"
         />
       </div>
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700"
+        className="w-full bg-green-600 text-white font-semibold py-2 px-4 rounded hover:bg-green-700"
       >
         Submit
       </button>
