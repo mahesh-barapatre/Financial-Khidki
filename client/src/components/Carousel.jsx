@@ -31,11 +31,11 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0">
+          <div key={index} className="w-full flex-shrink-0 rounded-full">
             <img
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-40 md:h-64 object-cover"
+              className="w-full h-40 md:h-64 object-cover rounded-3xl"
             />
           </div>
         ))}
@@ -43,13 +43,13 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
 
       <button
         onClick={goToPrevSlide}
-        className="absolute left-0 text-purple-500 top-1/2 transform -translate-y-1/2 px-4 py-2 rounded"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 rounded"
       >
         <Icon icon="icon-park-solid:left-c" width="40" />
       </button>
       <button
         onClick={goToNextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-purple-500 px-4 py-2 rounded"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 rounded"
       >
         <Icon icon="icon-park-solid:right-c" width="40" />
       </button>
