@@ -2,10 +2,13 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-function MultiLevelDropdown({ menuData, name }) {
+function MultiLevelDropdown({ menuData, name, setNavShow }) {
   const navigate = useNavigate();
 
   const handleNavigation = (url) => {
+    if (typeof setNavShow === "function") {
+      setNavShow(false);
+    }
     if (url) navigate(url);
   };
 
