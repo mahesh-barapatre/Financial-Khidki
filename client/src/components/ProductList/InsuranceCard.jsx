@@ -1,9 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { useNavigate } from "react-router-dom";
 
-const InsuranceCard = ({ title1, title2, description, icon, img }) => {
+const InsuranceCard = ({ title1, title2, description, icon, img, url }) => {
+  const navigate = useNavigate();
   return (
-    <div className="my-2 md:m-4">
+    <div onClick={() => navigate(url)} className="my-2 md:m-4 cursor-pointer">
       <div className="flex flex-col items-center min-h-[80px] md:min-h-[100px]">
         <p className="text-xs text-white w-3/5 text-center bg-green-500 rounded-sm">
           {description}

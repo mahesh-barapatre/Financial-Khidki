@@ -5,6 +5,7 @@ const InvestmentCardData = [
     description: "Free",
     icon: "",
     img: "/images/demat.png",
+    redirect_url: "/investmentform",
   },
   {
     title1: "Mutual ",
@@ -12,6 +13,7 @@ const InvestmentCardData = [
     description: "",
     icon: "",
     img: "/images/rise.png",
+    redirect_url: "/investmentform",
   },
   {
     title1: "Fixed ",
@@ -19,6 +21,7 @@ const InvestmentCardData = [
     description: "Upto 9.5% ",
     icon: "",
     img: "/images/fixed_deposit.png",
+    redirect_url: "/investmentform",
   },
   {
     title1: "Loan ",
@@ -26,6 +29,7 @@ const InvestmentCardData = [
     description: "Instant Approval",
     icon: "",
     img: "/images/coin.png",
+    redirect_url: "/investmentform",
   },
 ];
 

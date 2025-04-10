@@ -18,6 +18,7 @@ const InsuranceList = ({ title, CardData }) => {
             description={item.description}
             icon={item.icon}
             img={item.img}
+            url={item.redirect_url}
           />
         ))}
         <div
