@@ -100,7 +100,7 @@ function Header() {
             })}
           </div>
         </div>
-        <div className="flex md:w-1/6 justify-center" id="special_btn">
+        <div className="flex w-1/3 md:w-1/6 justify-center" id="special_btn">
           <div
             onClick={() => navigate("/help")}
             onMouseEnter={() => setHovered(true)}
