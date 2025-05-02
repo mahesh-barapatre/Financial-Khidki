@@ -53,7 +53,7 @@ export default function InvestmentForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mt-36 mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
+      className="max-w-lg mt-36 mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
     >
       <h2 className="text-xl font-semibold text-center">Investment Form</h2>
 

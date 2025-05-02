@@ -59,7 +59,7 @@ export default function TravelInsuranceForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mt-36 mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
+      className="max-w-xl mt-36 mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
     >
       <h2 className="text-2xl font-semibold text-center mb-4">
         Travel Insurance Form
