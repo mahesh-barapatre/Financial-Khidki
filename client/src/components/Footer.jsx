@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
   return (
-    <div className="border border-slate-400 flex px-12 py-5 space-y-5 flex-col w-full">
+    <div className="border border-slate-400 flex px-12 py-5 space-y-5 flex-col w-full bg-white">
       <div className="flex flex-col md:flex-row justify-evenly items-start w-full text-sm">
         <div className="flex flex-col space-y-3 justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Company</h6>

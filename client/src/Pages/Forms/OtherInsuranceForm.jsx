@@ -51,7 +51,7 @@ export default function OtherInsuranceForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mt-36 mx-auto p-6 bg-white rounded-lg shadow space-y-4"
+      className="max-w-xl mt-36 mx-auto p-6 bg-white rounded-lg shadow-2xl space-y-4"
     >
       <h2 className="text-2xl font-bold text-center">Other Insurance Form</h2>
 

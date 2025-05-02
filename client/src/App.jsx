@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
       <Header />
 
-      <div className="mb-20">
+      <div className="mb-20 mx-3">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/help" element={<CustomerCare />} />

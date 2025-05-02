@@ -63,7 +63,11 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
               </div>
             );
           })}
-          <MultiLevelDropdown menuData={Products} name={"Products"} />
+          <MultiLevelDropdown
+            menuData={Products}
+            name={"Products"}
+            setNavShow={setNavShow}
+          />
           {headerNavigations2.map((item, key) => {
             return (
               <div
@@ -78,8 +82,16 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
               </div>
             );
           })}
-          <MultiLevelDropdown menuData={Calculator} name={"Calculator"} />
-          <MultiLevelDropdown menuData={RaiseTicket} name={"Raise Ticket"} />
+          <MultiLevelDropdown
+            menuData={Calculator}
+            name={"Calculator"}
+            setNavShow={setNavShow}
+          />
+          <MultiLevelDropdown
+            menuData={RaiseTicket}
+            name={"Raise Ticket"}
+            setNavShow={setNavShow}
+          />
           {headerNavigations3.map((item, key) => {
             return (
               <div
