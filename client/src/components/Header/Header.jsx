@@ -49,7 +49,11 @@ function Header() {
         </div>
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
         <div className="text-xl ml-12 font-extrabold text-blue-500">
-          <img src="/images/logo_finan.png" className="h-16 w-72" />
+          <img
+            onClick={() => navigate("/")}
+            src="/images/logo_finan.png"
+            className="h-16 w-72 cursor-pointer"
+          />
         </div>
         {/* <div className="text-3xl">
           Let's find you the <span className="font-bold">Best Insurance</span>

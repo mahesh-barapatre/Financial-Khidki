@@ -26,19 +26,21 @@ const Carousel = ({ images, autoplayInterval = 3000 }) => {
 
   return (
     <div className="relative overflow-hidden">
-      <div
-        className="flex transition-transform duration-300 ease-in-out"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {images.map((image, index) => (
-          <div key={index} className="w-full flex-shrink-0 rounded-full">
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-40 md:h-64 object-cover rounded-3xl"
-            />
-          </div>
-        ))}
+      <div className="relative w-full" style={{ aspectRatio: "3 / 1" }}>
+        <div
+          className="flex transition-transform duration-300 ease-in-out h-full"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className="w-full flex-shrink-0 h-full">
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-fit rounded-3xl"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <button
