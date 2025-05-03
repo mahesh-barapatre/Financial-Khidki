@@ -7,12 +7,11 @@ function Filter() {
   const navigate = useNavigate();
 
   const img = [
-    "https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
-    "https://img.freepik.com/premium-psd/give-away-contest-banner-social-media-post-template_368797-832.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
-    "https://img.freepik.com/free-vector/you-win-game-banner-level-complete-badge-screen-casino-jackpot-with-golden-stars-crown-trumpets_88138-1474.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
-    "https://img.freepik.com/premium-psd/creative-giveaway-winner-announcement-social-media-post-instagram-template-premium-psd_148733-137.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
-    "https://img.freepik.com/free-photo/shopping-cart-with-gift-box-icon-promotion-discount-sale-reward-checkout-ecommerce-online-shopping-3d-illustration_56104-2102.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
-    "https://img.freepik.com/free-vector/man-paying-online-receiving-cashback-wallet_88138-692.jpg?size=626&ext=jpg&ga=GA1.1.41065760.1682405503&semt=sph",
+    "https://raw.githubusercontent.com/mahesh-barapatre/Invest_khidkey_assets/refs/heads/main/ad1.jpg",
+    "https://raw.githubusercontent.com/mahesh-barapatre/Invest_khidkey_assets/refs/heads/main/ad2%5D.jpg",
+    "https://raw.githubusercontent.com/mahesh-barapatre/Invest_khidkey_assets/refs/heads/main/ad3.jpg",
+    "https://raw.githubusercontent.com/mahesh-barapatre/Invest_khidkey_assets/refs/heads/main/ad4.jpg",
+    "https://raw.githubusercontent.com/mahesh-barapatre/Invest_khidkey_assets/refs/heads/main/ad5.jpg",
   ];
 
   return (

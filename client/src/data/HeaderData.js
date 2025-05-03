@@ -1,6 +1,13 @@
 export const Calculator = [
-  { name: "MF Return Calculator", url: "/profile" },
-  { name: "Insurance Premium Calculator", url: "/settings" },
+  {
+    name: "MF Return Calculator",
+    ext_url: "https://groww.in/calculators/mutual-fund-returns-calculator",
+  },
+  {
+    name: "Insurance Premium Calculator",
+    ext_url:
+      "https://www.uiic.in/CustomerPortalWeb/PremiumCalculator/data/MotorQuote.html#/motorQuote?agentId=",
+  },
 ];
 
 export const RaiseTicket = [
