@@ -43,7 +43,13 @@ function MultiLevelDropdown({ menuData, name, setNavShow }) {
               <MenuItem
                 as="button"
                 className="w-full px-4 py-2 hover:bg-gray-200"
-                onClick={() => handleNavigation(item.url)}
+                onClick={() => {
+                  if (item.ext_url) {
+                    window.open(item.ext_url, "_blank"); // or `new_window` if it's defined
+                  } else {
+                    handleNavigation(item.url);
+                  }
+                }}
               >
                 {item.name}
               </MenuItem>
