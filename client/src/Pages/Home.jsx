@@ -148,7 +148,9 @@ function Home() {
           <InsuranceList title={"Insurance"} CardData={InsuranceCardData} />
           <InsuranceList title={"Investment"} CardData={InvestmentCardData} />
         </div>
+
         <AchievementSection achievementInfo={achievementInfo} />
+
         <Partners />
       </div>
     </>

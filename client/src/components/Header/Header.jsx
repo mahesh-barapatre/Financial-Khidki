@@ -111,9 +111,14 @@ function Header() {
             onMouseLeave={() => setHovered(false)}
             className="flex text-sm justify-center items-center flex-row cursor-pointer hover:text-blue-500"
           >
-            <Icon icon={"material-symbols:call"} />
+            <Icon
+              icon="line-md:phone-call-twotone-loop"
+              width="24"
+              height="24"
+              style={{ color: "#adf9ff" }}
+            />
             <div className="md:ml-1">
-              {hovered ? "123-456-7890" : "Talk to Expert"}
+              {hovered ? "+91 91094 54147" : "Talk to Expert"}
             </div>
           </div>
         </div>

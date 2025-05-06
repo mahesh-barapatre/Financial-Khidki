@@ -33,7 +33,7 @@ export default function InvestmentForm() {
 
       const result = await response.json();
       if (result.status === "success") {
-        alert("Form submitted successfully!");
+        alert("Form submitted successfully! Our Team will contact you soon.");
         setFormData({
           type: "",
           name: "",

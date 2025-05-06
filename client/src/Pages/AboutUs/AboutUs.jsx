@@ -29,7 +29,7 @@ const AboutUs = () => {
       {/* Content Section */}
       <div className="flex flex-col justify-center items-center text-left">
         <h2 className="text-4xl font-bold text-blue-600 mb-4">About Us</h2>
-        <p className="text-gray-700 w-1/2">
+        <p className="text-gray-700 md:w-1/2">
           Welcome to Financial Khidki, your trusted partner in securing a
           financially stable future. Founded by{" "}
           <span className="font-semibold">Kshitij Gutpa</span>, we specialize in

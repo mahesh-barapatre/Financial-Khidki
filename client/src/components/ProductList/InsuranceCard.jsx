@@ -7,7 +7,7 @@ const InsuranceCard = ({ title1, title2, description, icon, img, url }) => {
   return (
     <div onClick={() => navigate(url)} className="my-2 md:m-4 cursor-pointer">
       <div className="flex flex-col items-center min-h-[80px] md:min-h-[100px]">
-        <p className="text-xs text-white w-3/5 text-center bg-green-500 rounded-sm">
+        <p className="text-xs text-white w-3/5 text-center bg-[#f34653] rounded-md">
           {description}
         </p>
         {icon ? (
