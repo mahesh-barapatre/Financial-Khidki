@@ -12,8 +12,8 @@ function Footer() {
           <p onClick={() => navigate("/becomeourAgent")}>Become our Agent</p>
           <p onClick={() => navigate("/aboutus")}>About Us</p>
 
-          <p>Contact us</p>
-          <p>News</p>
+          <p onClick={() => navigate("/help")}>Contact us</p>
+          <p onClick={() => navigate("/aboutus")}>Articles</p>
           <p>Customer reviews</p>
 
           <p>Event Gallery</p>
@@ -28,7 +28,7 @@ function Footer() {
           <p className="cursor-pointer" onClick={() => navigate("/travelform")}>
             Travel Insurance
           </p>
-          <p>Term Insurance</p>
+          <p onClick={() => navigate("/healthform")}>Term Insurance</p>
 
           <p className="cursor-pointer" onClick={() => navigate("/smeform")}>
             SME Insurance
@@ -72,10 +72,34 @@ function Footer() {
           <h6 className="text-slate-400 uppercase font-semibold">
             Calculators
           </h6>
-          <p>MF Return Calculator</p>
-          <p>Insurance Premium Calculator</p>
+          <p
+            onClick={() => {
+              window.open(
+                "https://groww.in/calculators/mutual-fund-returns-calculator",
+                "_blank",
+              );
+            }}
+          >
+            MF Return Calculator
+          </p>
+          <p
+            onClick={() => {
+              window.open(
+                "https://www.uiic.in/CustomerPortalWeb/PremiumCalculator/data/MotorQuote.html#/motorQuote?agentId=",
+                "_blank",
+              );
+            }}
+          >
+            Insurance Premium Calculator
+          </p>
+          <img
+            src="/bhima_financial_khidkey.jpg"
+            alt="bhima"
+            className="w-60 object-fit rounded-3xl"
+          />
         </div>
       </div>
+
       <h6 className="font-extrabold text-xs mx-auto">
         © Copyright 2008-2025 financialkhidkey.com. All Rights Reserved.
       </h6>

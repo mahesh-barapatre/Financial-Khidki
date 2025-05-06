@@ -32,7 +32,7 @@ export default function OtherInsuranceForm() {
 
       const result = await response.json();
       if (result.status === "success") {
-        alert("Submitted Successfully!");
+        alert("Form submitted successfully! Our Team will contact you soon.");
         setFormData({
           insuranceName: "",
           name: "",

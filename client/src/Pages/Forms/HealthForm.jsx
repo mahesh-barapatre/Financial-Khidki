@@ -37,7 +37,7 @@ export default function InsuranceForm() {
 
       const result = await res.json();
       if (result.status === "success") {
-        alert("Data submitted successfully!");
+        alert("Form submitted successfully! Our Team will contact you soon.");
         setFormData({
           type: "",
           name: "",

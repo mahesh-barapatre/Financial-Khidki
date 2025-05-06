@@ -66,7 +66,8 @@ export default function MotorForm() {
 
         const result = await response.json();
         if (result.status === "success") {
-          setMessage("Form submitted successfully!");
+          setMessage("");
+          alert("Form submitted successfully! Our Team will contact you soon.");
           setFormData({
             type: "",
             name: "",
@@ -138,7 +139,7 @@ export default function MotorForm() {
         required
         className="w-full border p-2 rounded"
       />
-
+      <div className="text-gray-500">Old Insurance/RC Copy</div>
       <input
         type="file"
         accept="image/*,application/pdf"
