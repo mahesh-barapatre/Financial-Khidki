@@ -115,7 +115,7 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
         <div
           onClick={() => {
             setNavShow(false);
-            navigate("/help");
+            navigate("/helpform");
           }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
