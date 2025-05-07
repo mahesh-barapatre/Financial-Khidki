@@ -1,11 +1,8 @@
 import React from "react";
-import TalkForm from "./Forms/TalkForm";
 
 function CustomerCare() {
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-100">
-      <TalkForm />
-      <div className="font-bold mt-10">OR</div>
+    <div className="flex flex-col justify-center h-screen items-center bg-gray-100 w-full">
       <div className="flex bg-white shadow-md rounded-md text-center p-5 my-10 flex-col items-center justify-evenly w-3/4 h-1/2 sm:w-1/4">
         <h5>Talk to Expert</h5>
         <p className="text-sm">

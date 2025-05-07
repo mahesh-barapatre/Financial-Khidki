@@ -18,6 +18,7 @@ import TrackTicket from "./Pages/Ticket/TrackTicket.jsx";
 import CreateTicketForm from "./Pages/Ticket/CreateTicket.jsx";
 import BecomePartnerForm from "./Pages/BecomeOurAgent.jsx";
 import OtherInsuranceForm from "./Pages/Forms/OtherInsuranceForm.jsx";
+import CustomerCarewithForm from "./Pages/CustomerCarewithForm.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/help" element={<CustomerCare />} />
+          <Route path="/helpform" element={<CustomerCarewithForm />} />
 
           <Route path="/healthInsurance" element={<HealthInsurance />} />
           <Route path="/claim" element={<Claim />} />

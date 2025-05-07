@@ -106,7 +106,7 @@ function Header() {
         </div>
         <div className="flex w-1/3 md:w-1/6 justify-center" id="special_btn">
           <div
-            onClick={() => navigate("/help")}
+            onClick={() => navigate("/helpform")}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             className="flex text-sm justify-center items-center flex-row cursor-pointer hover:text-blue-500"
@@ -115,7 +115,7 @@ function Header() {
               icon="line-md:phone-call-twotone-loop"
               width="24"
               height="24"
-              style={{ color: "#adf9ff" }}
+              style={{ color: "#2441f3" }}
             />
             <div className="md:ml-1">
               {hovered ? "+91 91094 54147" : "Talk to Expert"}

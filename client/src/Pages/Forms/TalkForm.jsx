@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TalkForm = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
@@ -13,45 +13,45 @@ const TalkForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbx89HHvcCyqlM1FN7c7GGBUxONmlMYroOjiKZ8L8T6cEnoXZnuIqa3e8u6WYxx8w7E6Wg/exec"; // Replace with your Apps Script URL
+      "https://script.google.com/macros/s/AKfycbwBQBBuZk7vSBbVAlPfhVv-yhl3SDtnoZlaBzd_HoHRyS4imdECVOBahv1FTgHKgCKfpg/exec"; // Replace with your actual URL
 
     try {
       const response = await fetch(scriptURL, {
         method: "POST",
-        body: JSON.stringify(formData),
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
+        body: new URLSearchParams(formData).toString(),
       });
 
       const result = await response.json();
-      alert("Thank You! Our Team Will contact you soon.");
-      setFormData({ name: "", mobile: "", remark: "" });
+      if (result.status === "success") {
+        alert("Form submitted successfully!");
+        setFormData({ name: "", mobile: "", remark: "" });
+      } else {
+        alert("Submission failed!");
+      }
     } catch (error) {
-      alert("Error submitting form!");
-      console.error("Error:", error);
+      console.error("Error!", error.message);
     }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto p-4 mt-40  shadow-md rounded-xl bg-white"
+      className="flex flex-col gap-4 max-w-md mx-auto mt-10 p-10 shadow-lg bg-white w-1/3 rounded-lg"
     >
-      <h2 className="text-xl font-semibold mb-4">Let's Talk</h2>
-
+      <div className="font-extralight text-lg">Talk to Expert</div>
       <input
         type="text"
         name="name"
-        placeholder="Your Name"
+        placeholder="Name"
         value={formData.name}
         onChange={handleChange}
         required
-        className="w-full mb-3 p-2 border rounded"
+        className="p-2 border rounded"
       />
-
       <input
         type="tel"
         name="mobile"
@@ -59,22 +59,20 @@ const TalkForm = () => {
         value={formData.mobile}
         onChange={handleChange}
         required
-        className="w-full mb-3 p-2 border rounded"
+        className="p-2 border rounded"
       />
-
       <textarea
         name="remark"
         placeholder="What you want to talk about?"
         value={formData.remark}
         onChange={handleChange}
         required
-        className="w-full mb-3 p-2 border rounded"
-        rows={4}
-      ></textarea>
-
+        className="p-2 border rounded"
+        rows="3"
+      />
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+        className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
       >
         Submit
       </button>
@@ -82,4 +80,4 @@ const TalkForm = () => {
   );
 };
 
-export default TalkForm;
+export default ContactForm;
