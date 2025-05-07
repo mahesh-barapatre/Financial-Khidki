@@ -34,7 +34,14 @@ function SideNav({ setNavShow, menuRef, isOpen }) {
       <div>
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
         <div className="text-xl ml-12 font-extrabold text-blue-500">
-          <img src="/images/logo_finan.png" className="h-16 w-44" />
+          <img
+            onClick={() => {
+              navigate("/");
+              setNavShow(false);
+            }}
+            src="/images/logo_finan.png"
+            className="h-16 w-44"
+          />
         </div>
         <div
           className="absolute text-lg font-semibold top-2 right-2 bg-red-500 px-2 rounded-full text-white"

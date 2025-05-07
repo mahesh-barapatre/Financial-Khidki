@@ -40,9 +40,9 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 max-w-md w-11/12 mx-auto mt-10 p-10 shadow-lg bg-white md:w-1/3 rounded-lg"
+      className="flex flex-col gap-4 max-w-md w-11/12 mx-auto mt-10 p-10 shadow-2xl bg-white md:w-1/3 rounded-lg"
     >
-      <div className="font-extralight text-lg">Request a Callback</div>
+      <div className="font-bold text-2xl">Request a Callback</div>
       <input
         type="text"
         name="name"
