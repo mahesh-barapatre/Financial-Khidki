@@ -6,21 +6,25 @@ const AboutUs = () => {
       name: "Instagram",
       icon: "skill-icons:instagram",
       img: "",
+      url: "",
     },
     {
       name: "Twitter",
       icon: "skill-icons:twitter",
       img: "",
+      url: "",
     },
     {
       name: "LinkedIn",
       icon: "skill-icons:linkedin",
       img: "",
+      url: "http://www.linkedin.com/in/financial-khidkey-714815364",
     },
     {
       name: "Facebook",
       icon: "",
       img: "",
+      url: "https://www.facebook.com/profile.php?id=61575036833090",
     },
   ];
 
@@ -70,9 +74,9 @@ const AboutUs = () => {
 
 const SocialCard = ({ item }) => {
   return (
-    <a
-      href="#"
+    <div
       className="hover:scale-125 transition-all ease-in-out duration-100"
+      onClick={() => window.open(item.url, "_blank")}
       //   className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
     >
       {item.icon ? (
@@ -85,7 +89,7 @@ const SocialCard = ({ item }) => {
         />
       )}
       {/* <span className="text-lg">{item.name}</span> */}
-    </a>
+    </div>
   );
 };
 

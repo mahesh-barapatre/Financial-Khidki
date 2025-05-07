@@ -4,7 +4,7 @@ import CustomerCare from "./CustomerCare";
 
 function CustomerCarewithForm() {
   return (
-    <div className="bg-gray-100 flex items-center justify center flex-col">
+    <div className=" flex items-center justify center flex-col">
       <TalkForm />
       <div className="font-extrabold text-xl mt-10">OR</div>
       <CustomerCare />

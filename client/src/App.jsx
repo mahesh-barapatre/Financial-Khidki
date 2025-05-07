@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <Header />
 
-      <div className="mb-20 mx-6">
+      <div className="px-6 md:px-0 pb-20">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sipcalc" element={<SipCalculator />} />

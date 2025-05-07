@@ -4,16 +4,31 @@ import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const navigate = useNavigate();
+  const handleClick = (url) => {
+    navigate(url);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <div className="border border-slate-400 flex px-12 py-5 space-y-5 flex-col w-full bg-white">
-      <div className="flex flex-col md:flex-row justify-evenly items-start w-full text-sm">
+    <div className="border-t-2 border-gray-300 flex px-12 py-5 space-y-5 flex-col w-full bg-white">
+      <div className="flex flex-col md:flex-row justify-evenly items-start w-full text-sm pt-3">
         <div className="flex flex-col space-y-3 justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Company</h6>
-          <p onClick={() => navigate("/becomeourAgent")}>Become our Agent</p>
-          <p onClick={() => navigate("/aboutus")}>About Us</p>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/becomeourAgent")}
+          >
+            Become our Agent
+          </p>
+          <p className="cursor-pointer" onClick={() => handleClick("/aboutus")}>
+            About Us
+          </p>
 
-          <p onClick={() => navigate("/help")}>Contact us</p>
-          <p onClick={() => navigate("/aboutus")}>Articles</p>
+          <p className="cursor-pointer" onClick={() => handleClick("/help")}>
+            Contact us
+          </p>
+          <p className="cursor-pointer" onClick={() => handleClick("/")}>
+            Articles
+          </p>
           <p>Customer reviews</p>
 
           <p>Event Gallery</p>
@@ -21,22 +36,44 @@ function Footer() {
         <div className="flex flex-col space-y-3 text-start justify-evenly h-full mb-3">
           <h6 className="text-slate-400 uppercase font-semibold">Insurance</h6>
 
-          <p onClick={() => navigate("/motorform")}>Motor Insurance</p>
-          <p className="cursor-pointer" onClick={() => navigate("/healthform")}>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/motorform")}
+          >
+            Motor Insurance
+          </p>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/healthform")}
+          >
             Life Insurance
           </p>
-          <p className="cursor-pointer" onClick={() => navigate("/travelform")}>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/travelform")}
+          >
             Travel Insurance
           </p>
-          <p onClick={() => navigate("/healthform")}>Term Insurance</p>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/healthform")}
+          >
+            Term Insurance
+          </p>
 
-          <p className="cursor-pointer" onClick={() => navigate("/smeform")}>
+          <p className="cursor-pointer" onClick={() => handleClick("/smeform")}>
             SME Insurance
           </p>
-          <p className="cursor-pointer" onClick={() => navigate("/healthform")}>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/healthform")}
+          >
             Health Insurance
           </p>
-          <p className="cursor-pointer" onClick={() => navigate("/otherform")}>
+          <p
+            className="cursor-pointer"
+            onClick={() => handleClick("/otherform")}
+          >
             Other Insurance
           </p>
         </div>
@@ -44,26 +81,26 @@ function Footer() {
           <h6 className="text-slate-400 uppercase font-semibold">Investment</h6>
           <p
             className="cursor-pointer"
-            onClick={() => navigate("/investmentform")}
+            onClick={() => handleClick("/investmentform")}
           >
             Open Demat
           </p>
           <p
             className="cursor-pointer"
-            onClick={() => navigate("/investmentform")}
+            onClick={() => handleClick("/investmentform")}
           >
             Mutual Funds
           </p>
           <p
             className="cursor-pointer"
-            onClick={() => navigate("/investmentform")}
+            onClick={() => handleClick("/investmentform")}
           >
             Fixed Deposit
           </p>
 
           <p
             className="cursor-pointer"
-            onClick={() => navigate("/investmentform")}
+            onClick={() => handleClick("/investmentform")}
           >
             Loan
           </p>
@@ -74,11 +111,13 @@ function Footer() {
           </h6>
           <p
             onClick={() => {
-              window.open(
-                "https://groww.in/calculators/mutual-fund-returns-calculator",
-                "_blank",
-              );
+              handleClick("/sipcalc");
+              // window.open(
+              //   "https://groww.in/calculators/mutual-fund-returns-calculator",
+              //   "_blank",
+              // );
             }}
+            className="cursor-pointer"
           >
             MF Return Calculator
           </p>
@@ -89,6 +128,7 @@ function Footer() {
                 "_blank",
               );
             }}
+            className="cursor-pointer"
           >
             Insurance Premium Calculator
           </p>
