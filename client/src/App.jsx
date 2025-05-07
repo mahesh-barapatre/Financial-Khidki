@@ -28,7 +28,7 @@ function App() {
       <div className="mb-20 mx-6">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sip_calculator" element={<SipCalculator />} />
+          <Route path="/sipcalc" element={<SipCalculator />} />
           <Route path="/help" element={<CustomerCare />} />
           <Route path="/helpform" element={<CustomerCarewithForm />} />
 

@@ -1,8 +1,8 @@
 export const Calculator = [
   {
     name: "MF Return Calculator",
-    url: "",
-    ext_url: "https://groww.in/calculators/mutual-fund-returns-calculator",
+    url: "/sipcalc",
+    // ext_url: "https://groww.in/calculators/mutual-fund-returns-calculator",
   },
   {
     name: "Insurance Premium Calculator",
