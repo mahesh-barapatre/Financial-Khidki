@@ -51,7 +51,7 @@ export default function BecomePartnerForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow space-y-4"
+      className="max-w-xl mx-auto p-6 mt-32 bg-white rounded-lg shadow space-y-4"
     >
       <h2 className="text-2xl font-bold text-center">Become Our Agent</h2>
 

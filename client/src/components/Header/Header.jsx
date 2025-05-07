@@ -48,11 +48,11 @@ function Header() {
           <SideNav ref={menuRef} isOpen={navShow} setNavShow={setNavShow} />
         </div>
         {/* <Icon icon="logos:woocommerce" width={"290"} /> */}
-        <div className="text-xl ml-12 font-extrabold text-blue-500">
+        <div className="text-xl ml-6 font-extrabold text-blue-500">
           <img
             onClick={() => navigate("/")}
             src="/images/logo_finan.png"
-            className="h-16 w-72 cursor-pointer"
+            className="h-16 md:w-72 w-52 cursor-pointer"
           />
         </div>
         {/* <div className="text-3xl">
@@ -104,12 +104,12 @@ function Header() {
             })}
           </div>
         </div>
-        <div className="flex w-1/3 md:w-1/6 justify-center" id="special_btn">
+        <div className="flex w-2/5 md:w-1/6 justify-center" id="special_btn">
           <div
             onClick={() => navigate("/helpform")}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="flex text-sm justify-center items-center flex-row cursor-pointer hover:text-blue-500"
+            className="flex text-sm justify-center w-full items-center flex-row cursor-pointer hover:text-blue-500"
           >
             <Icon
               icon="line-md:phone-call-twotone-loop"
