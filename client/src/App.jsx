@@ -19,6 +19,7 @@ import CreateTicketForm from "./Pages/Ticket/CreateTicket.jsx";
 import BecomePartnerForm from "./Pages/BecomeOurAgent.jsx";
 import OtherInsuranceForm from "./Pages/Forms/OtherInsuranceForm.jsx";
 import CustomerCarewithForm from "./Pages/CustomerCarewithForm.jsx";
+import SipCalculator from "./components/Calculators/SIPCalculator.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
       <div className="mb-20 mx-6">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/sip_calculator" element={<SipCalculator />} />
           <Route path="/help" element={<CustomerCare />} />
           <Route path="/helpform" element={<CustomerCarewithForm />} />
 

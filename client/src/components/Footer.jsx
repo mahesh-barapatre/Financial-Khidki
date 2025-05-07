@@ -95,7 +95,10 @@ function Footer() {
           <img
             src="/bhima_financial_khidkey.jpg"
             alt="bhima"
-            className="w-60 object-fit rounded-3xl"
+            className="w-60 object-fit rounded-3xl cursor-pointer"
+            onClick={() => {
+              window.open("https://bimabharosa.irdai.gov.in/", "_blank");
+            }}
           />
         </div>
       </div>
