@@ -55,7 +55,7 @@ export default function InsuranceClaimForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mt-36 mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
+      className="max-w-xl mt-36 mx-6 sm:mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
     >
       <h2 className="text-2xl font-bold text-center">Insurance Claim Form</h2>
 

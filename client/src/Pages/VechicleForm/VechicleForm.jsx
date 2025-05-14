@@ -90,7 +90,7 @@ export default function VehicleForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg space-y-4"
+      className="max-w-md mx-6 sm:mx-auto p-6 bg-white shadow-md rounded-lg space-y-4"
     >
       <h2 className="text-xl font-bold mb-4">Vehicle Registration Form</h2>
 
