@@ -92,7 +92,7 @@ export default function MotorForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mt-36 mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
+      className="max-w-md mt-36 mx-6 sm:mx-auto p-6 bg-white shadow-2xl rounded-lg space-y-4"
     >
       <h2 className="text-xl font-bold mb-4">Vehicle Registration Form</h2>
 

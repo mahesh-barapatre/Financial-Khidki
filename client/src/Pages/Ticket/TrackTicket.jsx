@@ -10,11 +10,11 @@ function TrackTicket() {
         </p>
         <div>
           <h6 className="uppercase ">email us</h6>
-          <h5 className="text-purple-500">help@financialkhidki.in</h5>
+          <h5 className="text-purple-500">financialkhidkey@gmail.com</h5>
         </div>
         <div>
           <h6 className="uppercase ">call us</h6>
-          <h5 className="text-purple-500">080-4040-4242</h5>
+          <h5 className="text-purple-500">+91 91094 54147</h5>
         </div>
       </div>
     </div>
